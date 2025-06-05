@@ -1,0 +1,164 @@
+{
+  "info": {
+    "name": "Product API Collection",
+    "_postman_id": "12345678-abcd-1234-efgh-56789abcdef0",
+    "description": "Postman collection to test Express.js Product API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET Product by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST New Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "x-api-key",
+            "value": "mysecretapikey",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Blender\",\n  \"description\": \"High-speed blender for smoothies\",\n  \"price\": 75,\n  \"category\": \"kitchen\",\n  \"inStock\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      }
+    },
+    {
+      "name": "PUT Update Product",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "x-api-key",
+            "value": "mysecretapikey",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Blender Pro\",\n  \"description\": \"Updated description\",\n  \"price\": 85,\n  \"category\": \"kitchen\",\n  \"inStock\": false\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "DELETE Product",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "mysecretapikey",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/products/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET Product Stats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/products/stats",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products",
+            "stats"
+          ]
+        }
+      }
+    }
+  ]
+}
